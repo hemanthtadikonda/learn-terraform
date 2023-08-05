@@ -12,7 +12,7 @@ resource "aws_instance" "instance" {
     instance_type = "t2.micro"
     vpc_security_group_ids = ["sg-0baa986d8ebb5eeda"]
     tags  = {
-      Name  = lookup(var.components, count.index)
+      Name  = element(var.components, count.index) // it is list you should mention element // lookup works for Map input
     }
 }
 
