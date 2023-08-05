@@ -74,3 +74,36 @@ output "fruit_grape_quan"  {
 output "fruit_mango_details" {
   value  = var.fruits_quan_with_price["mango"]
 }
+
+
+#### # Variable Data Types ###
+variable "fruits_details"{
+  default  = {
+    mango  = {
+      quan  = 30 #num
+      for_export  = true  # boolean
+      place  = "canada" # string
+    }
+    kiwi  = {
+      quan  = 40 # num
+      for_export = true # boolean
+      place = "kenya" # string
+    }
+  }
+}
+# Variable in a combination of any other string then it needs to be with in  ${}
+// to access mango details //
+output "mango_details"{
+  value  = ${var.fruits_details["mango"]}
+}
+
+//to access kiwi for sale //
+output "is kiwi for sale"   {
+  value  = ${var.fruits_details["kiwi"].for_export}
+}
+
+//to access kiwi for place //
+output "is kiwi export place "   {
+  value  = ${var.fruits_details["kiwi"].place}
+}
+
