@@ -12,7 +12,7 @@ variable "components" {
 
 resource "aws_security_group" "allow_tls" {
   for_each = var.components
-  name        = lookup( each.key, "name", null)  // we have done lot of stunts here like
+  name        = lookup( each.value, "name", null)  // we have done lot of stunts here like
 }                                     //      like   name        = lookup(var.components, each.value["name"], null)
 
 
