@@ -9,7 +9,7 @@ output "person_hemanth" {
 }
 
 output "person_dasu"{
-  value = try(var.persons, "no such name")  //
+  value = try(var.persons["dasu"], "no such name")  //
 }
 
 variable "person_with_role" {
