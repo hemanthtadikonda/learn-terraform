@@ -94,16 +94,7 @@ variable "fruits_details"{
 # Variable in a combination of any other string then it needs to be with in  ${}
 // to access mango details //
 output "mango_details"{
-  value  = ${var.fruits_details["mango"]}
+  value  = "${var.fruits_details["mango"]}"
 }
 
-//to access kiwi for sale //
-output "is kiwi for sale"   {
-  value  = ${var.fruits_details["kiwi"].for_export}
-}
-
-//to access kiwi for place //
-output "is kiwi export place "   {
-  value  = ${var.fruits_details["kiwi"].place}
-}
 
