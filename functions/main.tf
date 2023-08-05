@@ -20,7 +20,7 @@ variable "person_with_role" {
 }
 
 output "person_drona_role"{
-  value = try(var.person_with_role, "no such one") // without function we get error
+  value = try(var.person_with_role["drona"], "no such one") // without function we get error
 }
 
 variable "person_details" {
@@ -36,7 +36,7 @@ variable "person_details" {
   }
 }
 
-output "person_details_ramu"{
+output "person_hemanth_org"{
   value = "${lookup(var.person_details["hemanth"], "org", "k" )}"
 }
 
