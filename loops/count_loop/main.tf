@@ -1,7 +1,7 @@
 // If we want to iterate same task (resources) multiple time we have a concept called loops//
 
 variable "components" {
-  default = ["frontend" , "mongodb" ]
+  default = [ "catalogue" "frontend" , "mongodb" ]
 }
 
 resource "aws_security_group" "allow_tls" {
