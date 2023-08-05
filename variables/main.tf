@@ -98,11 +98,11 @@ output "mango_details"{
 }
 
 //to access kiwi for sale //
-output "is kiwi for sale"   {
-  value  = "Kiwi status = ${var.fruits_details["kiwi"].for_export}"
+output "is kiwi_for_sale"   {
+  value  = "${var.fruits_details["kiwi"].for_export}"
 }
 
 //to access kiwi for place //
-output "is kiwi export place "   {
-  value  = "kiwi export place = ${var.fruits_details["kiwi"].place}"
-}
+output "is kiwi_export_place "   {
+  value  = "${var.fruits_details["kiwi"].place}"
+
