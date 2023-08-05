@@ -37,7 +37,7 @@ variable "person_details" {
 }
 
 output "person_details_ramu"{
-  value = lookup(var.person_details["ramu"], "no ramu here")
+  value = "${lookup(var.person_details["ramu"], "no ramu here")}"
 }
 
 
