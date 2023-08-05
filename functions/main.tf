@@ -12,3 +12,33 @@ output "person_dasu"{
   value = try(var.persons, "no such name")  //
 }
 
+variable "person_with_role" {
+  default = {
+    hemanth = "analyst"
+    harika  = "analyst"
+  }
+}
+
+output "person_drona_role"{
+  value = try(var.person_with_role, "no such one")
+}
+
+variable "person_details" {
+  default = {
+    hemanth = {
+      role  = "analyst"
+      exp   = 2
+    }
+    baji  = {
+      role = "analyst"
+      exp  = 3
+    }
+  }
+}
+
+output "person_details_ramu"{
+  value = lookup(var.person_details["ramu"], "no ramu here")
+}
+
+
+
