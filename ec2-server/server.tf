@@ -9,7 +9,7 @@ resource "aws_instance" "amazon" {
 }
 resource "aws_route53_record" "amazon" {
 
-  zone_id = aws_route53_zone.primary.zone_id
+  zone_id = "Z09760323G7SC2VABFTOY"
   name    = "amazon.tadikonda.online"
   type    = "A"
   ttl     = 30
