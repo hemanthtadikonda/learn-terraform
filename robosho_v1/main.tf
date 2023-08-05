@@ -189,7 +189,7 @@ resource "aws_instance" "dispatch" {
   }
 }
 
-resource "aws_route53_record" "payment" {
+resource "aws_route53_record" "dispatch" {
   zone_id = "Z0021413JFIQEJP9ZO9Z"
   name    = "dispatch-dev.tadikonda.online"
   type    = "A"
