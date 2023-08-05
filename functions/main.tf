@@ -37,8 +37,8 @@ variable "person_details" {
 }
 
 output "person_hemanth_org"{
-  value = "${lookup(var.person_details["hemanth"], "org", "k" )}"
+  value = "${lookup(var.person_details["hemanth"], "org", "k" )}" // equal to try function but have more features
 }
 
-
+//"${try(var.person_details["hemanth"], "org" , K)}"
 
