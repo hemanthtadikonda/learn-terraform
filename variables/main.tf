@@ -105,4 +105,4 @@ output "kiwi_export"   {
 //to access kiwi for place //
 output "kiwi_export_place"   {
   value  = "${var.fruits_details["kiwi"].place}"
-
+}
