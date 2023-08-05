@@ -4,7 +4,7 @@ resource "aws_instance" "amazon" {
     vpc_security_group_ids = ["sg-0baa986d8ebb5eeda"]
 
     tags = {
-        name = "amazon"
+        Name = "amazon"
     }
 }
 resource "aws_route53_record" "amazon" {
