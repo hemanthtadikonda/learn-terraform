@@ -22,7 +22,7 @@ output "fruits_second" {
   value  = var.fruits[1]
 }
 // to access the 3rd variable
-output "fruits"{
+output "fruits_third"{
   value  = var.fruits[2]
 }
 
