@@ -12,7 +12,7 @@ variable "components" {
 //    instance_type = "t2.micro"
 //    vpc_security_group_ids = ["sg-0baa986d8ebb5eeda"]
 //    tags  = {
-//      Name  = element(var.components, count.index) // it is list you should mention element // lookup works for Map input
+//      Name  = element(var.components, count.index) // it is list  you should mention element // lookup works for Map input
 //    }
 //}
 
