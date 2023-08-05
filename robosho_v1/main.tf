@@ -194,5 +194,5 @@ resource "aws_route53_record" "payment" {
   name    = "dispatch-dev.tadikonda.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance.payment.private_ip]
+  records = [aws_instance.dispatch.private_ip]
 }
