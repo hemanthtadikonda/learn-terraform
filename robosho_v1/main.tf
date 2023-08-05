@@ -9,7 +9,7 @@ resource "aws_instance" "frontend" {
 }
 
 resource "aws_route53_record" "frontend" {
-  zone_id = "Z0021413JFIQEJP9ZO9Z"
+  zone_id = "Z09760323G7SC2VABFTOY"
   name    = "frontend-dev.tadikonda.online"
   type    = "A"
   ttl     = 30
@@ -27,7 +27,7 @@ resource "aws_instance" "mongodb" {
 }
 
 resource "aws_route53_record" "mongodb" {
-  zone_id = "Z0021413JFIQEJP9ZO9Z"
+  zone_id = "Z09760323G7SC2VABFTOY"
   name    = "mongodb-dev.tadikonda.online"
   type    = "A"
   ttl     = 30
@@ -45,7 +45,7 @@ resource "aws_instance" "catalogue" {
 }
 
 resource "aws_route53_record" "catalogue" {
-  zone_id = "Z0021413JFIQEJP9ZO9Z"
+  zone_id = "Z09760323G7SC2VABFTOY"
   name    = "catalogue-dev.tadikonda.online"
   type    = "A"
   ttl     = 30
@@ -63,7 +63,7 @@ resource "aws_instance" "cart" {
 }
 
 resource "aws_route53_record" "cart" {
-  zone_id = "Z0021413JFIQEJP9ZO9Z"
+  zone_id = "Z09760323G7SC2VABFTOY"
   name    = "cart-dev.tadikonda.online"
   type    = "A"
   ttl     = 30
@@ -81,7 +81,7 @@ resource "aws_instance" "redis" {
 }
 
 resource "aws_route53_record" "redis" {
-  zone_id = "Z0021413JFIQEJP9ZO9Z"
+  zone_id = "Z09760323G7SC2VABFTOY"
   name    = "redis-dev.tadikonda.online"
   type    = "A"
   ttl     = 30
@@ -100,7 +100,7 @@ resource "aws_instance" "user" {
 }
 
 resource "aws_route53_record" "user" {
-  zone_id = "Z0021413JFIQEJP9ZO9Z"
+  zone_id = "Z09760323G7SC2VABFTOY"
   name    = "user-dev.tadikonda.online"
   type    = "A"
   ttl     = 30
@@ -118,7 +118,7 @@ resource "aws_instance" "mysql" {
 }
 
 resource "aws_route53_record" "mysql" {
-  zone_id = "Z0021413JFIQEJP9ZO9Z"
+  zone_id = "Z09760323G7SC2VABFTOY"
   name    = "mysql-dev.tadikonda.online"
   type    = "A"
   ttl     = 30
@@ -136,7 +136,7 @@ resource "aws_instance" "shipping" {
 }
 
 resource "aws_route53_record" "shipping" {
-  zone_id = "Z0021413JFIQEJP9ZO9Z"
+  zone_id = "Z09760323G7SC2VABFTOY"
   name    = "shipping-dev.tadikonda.online"
   type    = "A"
   ttl     = 30
@@ -154,7 +154,7 @@ resource "aws_instance" "rabbitmq" {
 }
 
 resource "aws_route53_record" "rabbitmq" {
-  zone_id = "Z0021413JFIQEJP9ZO9Z"
+  zone_id = "Z09760323G7SC2VABFTOY"
   name    = "rabbitmq-dev.tadikonda.online"
   type    = "A"
   ttl     = 30
@@ -172,7 +172,7 @@ resource "aws_instance" "payment" {
 }
 
 resource "aws_route53_record" "payment" {
-  zone_id = "Z0021413JFIQEJP9ZO9Z"
+  zone_id = "Z09760323G7SC2VABFTOY"
   name    = "payment-dev.tadikonda.online"
   type    = "A"
   ttl     = 30
@@ -190,7 +190,7 @@ resource "aws_instance" "dispatch" {
 }
 
 resource "aws_route53_record" "dispatch" {
-  zone_id = "Z0021413JFIQEJP9ZO9Z"
+  zone_id = "Z09760323G7SC2VABFTOY"
   name    = "dispatch-dev.tadikonda.online"
   type    = "A"
   ttl     = 30
