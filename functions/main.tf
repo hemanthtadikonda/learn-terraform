@@ -5,7 +5,7 @@ variable "persons"{
 }
 
 output "person_hemanth" {
-  value = element(var.persons, 2)} // var.persons[2] //list index will give error element fun will recycle it
+  value = element(var.persons, 2) // var.persons[2] //list index will give error element fun will recycle it
 }
 
 output "person_dasu"{
@@ -20,7 +20,7 @@ variable "person_with_role" {
 }
 
 output "person_drona_role"{
-  value = try(var.person_with_role, "no such one")
+  value = try(var.person_with_role, "no such one") // without function we get error
 }
 
 variable "person_details" {
