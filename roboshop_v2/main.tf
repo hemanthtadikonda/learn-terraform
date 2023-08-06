@@ -18,10 +18,10 @@ variable "security_groups" {
 variable "components" {
   default = {
     frontend  = { name = "frontend-dev"  }
-    mongodb   = { name = "mongodb-dev "  }
+    mongodb   = { name = "mongodb-dev"  }
     catalogue = { name = "catalogue-dev" }
-    redis     = { name = "redis-dev "    }
-    user      = { name = "user-dev"      }
+    redis     = { name = "redis-dev"    }
+    user      = { name = "user-dev"     }
     cart      = { name = "cart-dev"     }
     mysql     = { name = "mysql-dev"     }
     shipping  = { name = "shipping-dev"  }
