@@ -12,7 +12,7 @@ variable "instance_type" {
 }
 
 variable "security_groups" {
-  default  = ["sg-0baa986d8ebb5eeda"]
+  default  = ["sg-0baa986d8ebb5eeda"]  // // you need to concentrate here
 }
 
 variable "components" {
@@ -42,7 +42,7 @@ resource "aws_instance" "instance" {
   vpc_security_group_ids  = var.security_groups
 
   tags            = {
-    Name          = lookup(each.value,"name", null )
+    Name          = lookup(each.value,"name", null )   // you need to concentrate here
   }
 }
 
@@ -55,8 +55,8 @@ resource "aws_route53_record" "record" {
   for_each = var.components
 
   zone_id = var.zone_id
-  name    = "${lookup(each.value,"name",null)}.tadikonda.online"
+  name    = "${lookup(each.value,"name",null)}.tadikonda.online"   // you need to concentrate here
   type    = "A"
   ttl     = 30
-  records = [lookup(lookup(aws_instance.instance,each.key,null),"private_ip",null)]
+  records = [lookup(lookup(aws_instance.instance,each.key,null),"private_ip",null)]  // you need to concentrate here
 }
