@@ -15,3 +15,21 @@ resource "aws_route53_record" "record" {
   ttl     = 30
   records = [aws_instance.instance.private_ip]
 }
+
+resource "null_resource" "ansible" {
+
+  depends_on = [
+    "aws_route53_record.record"
+  ]
+
+  provisioner "local-exec" {
+    command = <<EOF
+  cd /root/Ansible-roboshop
+  git pull
+  sleep 40
+  ansible-playbook -i ${var.name}-dev.tadikonda.online, main.yml -e ansible_user=centos -e ansible_password=DevOps321 -e component=${var.name}
+  EOF
+
+  }
+
+}
