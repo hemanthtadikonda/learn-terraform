@@ -11,8 +11,8 @@ variable "instance_type" {
   default  = "t2.micro"
 }
 
-variable "security_group" {
-  default  = "sg-0baa986d8ebb5eeda"
+variable "security_groups" {
+  default  = ["sg-0baa986d8ebb5eeda"]
 }
 
 variable "components" {
@@ -39,7 +39,7 @@ resource "aws_instance" "instance" {
 
   ami                     = var.ami
   instance_type           = var.instance_type
-  vpc_security_group_ids  = var.security_group
+  vpc_security_group_ids  = var.security_groups
 
   tags            = {
     Name          = lookup(each.value,"name", null )
