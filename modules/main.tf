@@ -1,7 +1,12 @@
-module "test" {                   // calling test module in local path
+module "test" {
   source = "./local-module"
+  instance_type = var.instance_type
 }
 
-output "ami" {
-  value = "test"     // module.test.ami - you can get only ami output date here
-}                       // out put inside the child module can't directly print on root module
+output "test" {
+  value = module.test
+}
+
+variable "instance_type" {
+  default = "t3.micro"
+}
