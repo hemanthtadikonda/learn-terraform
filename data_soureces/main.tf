@@ -3,3 +3,7 @@ data "aws_ami_ids" "ami" {
 
 }
 
+output "ids"{
+  value = data.aws_ami_ids.ami.ids
+}
+
