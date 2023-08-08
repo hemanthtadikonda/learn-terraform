@@ -1,3 +1,3 @@
 bucket = "tad-state"
-key    = "test/dev"
+key    = "test/dev.tfstate"
 region = "us-east-1"
