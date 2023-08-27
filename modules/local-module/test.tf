@@ -5,7 +5,7 @@ data "aws_ami" "ami" {
 }
 
 output "ami" {
-  value = data.aws_ami.ami.id  // here id is attribute before doing anything read documentation once
+  value = data.aws_ami.ami.id  # here id is attribute before doing anything read documentation once
 }
 
 resource "aws_instance" "instance" {
@@ -14,4 +14,4 @@ resource "aws_instance" "instance" {
   vpc_security_group_ids = [ "sg-0baa986d8ebb5eeda" ]
 }
 
-variable "instance_type" {}  // here it is collecting variables from root module
+variable "instance_type" {}  # here it is collecting variables from root module
